@@ -17,6 +17,18 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
+Vue.component('todo-item',{
+  props: ['todo'],
+  template: '<li>{ {todo.txt }}</li>'
+})
+
+const app7 = new Vue({
+    el: '#app-7',
+    data: {
+      groceryList: [
+        {id:0, text: 'ghost-0'},
+        {id:1, text: 'pumpkin-0'},
+        {id:2, text: 'doracula-0'}
+      ]
+    }
 });
