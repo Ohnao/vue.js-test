@@ -19,16 +19,12 @@ Vue.component('example-component', require('./components/ExampleComponent.vue'))
 
 Vue.component('todo-item',{
   props: ['todo'],
-  template: '<li>{ {todo.txt }}</li>'
+  template: '<li>{{ todo.txt }}</li>'
 })
 
-const app7 = new Vue({
-    el: '#app-7',
-    data: {
-      groceryList: [
-        {id:0, text: 'ghost-0'},
-        {id:1, text: 'pumpkin-0'},
-        {id:2, text: 'doracula-0'}
-      ]
-    }
-});
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})

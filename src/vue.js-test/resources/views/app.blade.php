@@ -16,13 +16,12 @@
       window.Laravel.csrf_Token = "{{ csrf_token() }}"
     </script>
   </head>
-  <body>
-    <div id="app-7">
-            <ol>
-                <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
-            </ol>
-      </div>
 
-        <script src=" {{ mix('js/app.js') }} "></script>
+  <body>
+    <div id="app">
+      <p>@{{ message }}</p>
+    </div>
   </body>
+
+  <script src=" {{ mix('js/app.js') }} "></script>
 </html>
